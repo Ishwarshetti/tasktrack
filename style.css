@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, red, blue);
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-app {
+    width: 90%;
+    max-width: 540px;
+    background: white;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Title */
+.todo-app h2 {
+    color: #002765;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Input Row */
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+#input-box {
+    text-transform: uppercase;
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 18px;
+    padding: 10px;
+}
+
+/* Button */
+button {
+    border: none;
+    outline: none;
+    padding: 12px 20px;
+    background: #ff5945;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #e74c3c;
+}
+
+/* Task List */
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    position: relative;
+    list-style: none;
+    padding: 12px 40px 12px 20px;
+    font-size: 18px;
+    word-wrap: break-word;  /* ✅ Ensures text breaks properly */
+    background: #f9f9f9;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Checked task */
+.checked {
+    text-decoration: line-through;
+    color: gray;
+}
+
+/* Delete Button */
+ul li span {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    color: #555;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+ul li span:hover {
+    background: red;
+    color: white;
+}
+
+/* ✅ Responsive Design for Small Screens */
+@media (max-width: 600px) {
+    .todo-app {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .row {
+        flex-direction: column;
+        padding: 15px;
+        border-radius: 20px;
+    }
+
+    #input-box {
+        font-size: 16px;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    ul li {
+        font-size: 16px;
+        padding: 10px;
+    }
+}
